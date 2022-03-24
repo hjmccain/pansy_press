@@ -3,7 +3,7 @@ import '../Header.css'
 
 const Menu = ({ scrolled }) => {
     console.log({ scrolled });
-    const menuItems = <>
+    const menuItems = <div>
         <MenuItem url="poems">
             read our poems
         </MenuItem>
@@ -16,24 +16,24 @@ const Menu = ({ scrolled }) => {
         <MenuItem url="about">
             about pansy
         </MenuItem>
-    </>
-
-    // return (
-    //     <>
-    //         <span className={scrolled ? "menu-scrolled visible" : "menu-scrolled hidden"}>
-    //             {menuItems}
-    //         </span>
-    //         <span className={scrolled ? "menu hidden" : "menu visible"}>
-    //             {menuItems}
-    //         </span>
-    //     </>
-    // )
+    </div>
 
     return (
-        <span className="menu">
-            {menuItems}
-        </span>
+        <>
+            <span className={scrolled ? "menu-scrolled visible" : "menu-scrolled hidden"}>
+                {menuItems}
+            </span>
+            <span className={scrolled ? "menu hidden" : "menu visible"}>
+                {menuItems}
+            </span>
+        </>
     )
+
+    // return (
+    //     <span className="menu-scrolled">
+    //         {menuItems}
+    //     </span>
+    // )
 }
 
 export default Menu

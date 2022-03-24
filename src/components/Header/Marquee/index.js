@@ -31,16 +31,22 @@ const Marquee = ({ scrolled }) => {
         )
     }
 
-    // if (scrolled) {
-    //     return <div className="sticker-marquee-scrolled">
-    //         <Logo />
-    //     </div>
-    // }
-
-    return <div className="sticker-marquee">
-        <Logo />
-    </div>
-
+    return (
+        <>
+            {/* <div className={scrolled ? "sticker-marquee-scrolled" : "sticker-marquee-scrolled"}>
+                <Logo />
+            </div>
+            <div className={scrolled ? "sticker-marquee" : "sticker-marquee"}>
+                <Logo />
+            </div> */}
+            <div className={scrolled ? "sticker-marquee-scrolled visible" : "sticker-marquee-scrolled hidden"}>
+                <Logo />
+            </div>
+            <div className={scrolled ? "sticker-marquee hidden" : "sticker-marquee visible"}>
+                <Logo />
+            </div>
+        </>
+    )
 }
 
 export default Marquee
