@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import React from 'react'
+import { Outlet } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header';
+import flowers from './flowers.png'
 
 function App() {
+  const [scrolled, updateScrolled] = React.useState(false)
+
+  const scrollHandler = () => {
+    const scrollY = window.scrollY
+
+    if (!scrolled && scrollY > 70) {
+      updateScrolled(true)
+    } else if (scrolled && scrollY < 70) {
+      updateScrolled(false)
+    }
+  };
+
+  window.addEventListener('scroll', scrollHandler, true);
+
   return (
+    // <div className={scrolled ? `App scrolled` : 'App'}>
+    //   <div className={scrolled ? `header-scrolled` : ''}>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <Header scrolled={scrolled} />
+      </div>
+      <img src={flowers} />
+      <Outlet />
+    </div >
   );
 }
 

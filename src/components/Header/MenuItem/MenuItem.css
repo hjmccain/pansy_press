@@ -1,0 +1,11 @@
+.active-menu-item {
+    text-decoration: underline;
+}
+
+.menu-item {
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    text-decoration: underline;
+}
