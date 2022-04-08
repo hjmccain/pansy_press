@@ -32,8 +32,6 @@ const Marquee = ({ scrolled }) => {
         )
     }
 
-    console.log({ scrolled });
-
     return (
         <>
             <div className={scrolled ? "sticker-marquee-scrolled visible" : "sticker-marquee-scrolled hidden"}>
