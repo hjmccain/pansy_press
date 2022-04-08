@@ -37,7 +37,7 @@ const Content = ({ poem }) => {
 const Poems = () => {
     const { poem: poemUrl } = useParams();
     const selectedPoem = poems.find(poem => poem.url === poemUrl)
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     // TODO: This breaks the back button functionality...
     // React.useEffect(() => {
