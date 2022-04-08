@@ -29,7 +29,7 @@ const Sidebar = ({ poems }) => {
 const Content = ({ poem }) => {
     return (
         <div className="poem-content">
-            <div>{poem}</div>
+            <div>{poem || "<< Select a poem!"}</div>
         </div>
     )
 }
@@ -39,11 +39,12 @@ const Poems = () => {
     const selectedPoem = poems.find(poem => poem.url === poemUrl)
     const navigate = useNavigate();
 
-    React.useEffect(() => {
-        if (!selectedPoem) {
-            navigate(`${poems[0].url}`);
-        }
-    })
+    // TODO: This breaks the back button functionality...
+    // React.useEffect(() => {
+    //     if (!selectedPoem) {
+    //         navigate(`${poems[0].url}`);
+    //     }
+    // })
 
     return <div className="page">
         <h1>POEMS</h1>

@@ -1,11 +1,17 @@
 .active-menu-item {
-    text-decoration: underline;
+    background-color: yellow;
+    text-decoration: none;
+    width: fit-content;
 }
 
 .menu-item {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .menu-item:hover {
-    text-decoration: underline;
+    background-color: yellow;
+}
+
+.active-menu-item::before {
+    content: "> ";
 }

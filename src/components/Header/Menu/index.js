@@ -2,7 +2,6 @@ import MenuItem from '../MenuItem'
 import '../Header.css'
 
 const Menu = ({ scrolled }) => {
-    console.log({ scrolled });
     const menuItems = <div>
         <MenuItem url="poems">
             read our poems
@@ -28,12 +27,6 @@ const Menu = ({ scrolled }) => {
             </span>
         </>
     )
-
-    // return (
-    //     <span className="menu-scrolled">
-    //         {menuItems}
-    //     </span>
-    // )
 }
 
 export default Menu

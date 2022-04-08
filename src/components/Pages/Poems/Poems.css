@@ -27,15 +27,22 @@
 }
 
 .active-poem {
-    text-decoration: underline;
-}
-
-.poem {
+    background-color: yellow;
     text-decoration: none;
 }
 
-.poem:hover {
+.active-poem::before {
+    content: "> ";
+    margin-left: -10px;
+    background-color: yellow;
+}
+
+.poem {
     text-decoration: underline;
+}
+
+.poem:hover {
+    background-color: yellow;
 }
 
 @media screen and (max-width: 660px) {

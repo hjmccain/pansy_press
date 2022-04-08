@@ -52,19 +52,65 @@
   font-weight: 800;
 }
 
-img {
+.flowers1 {
+  position: relative;
   width: 750px;
+  margin-top: -30px;
+  z-index: -1;
+}
+
+.flowers4 {
+  position: relative;
+  top: 18px;
+  width: 299px;
+  right: 144px;
+  /* z-index: -1; */
+  transform: rotate(16deg);
   margin-top: -30px;
 }
 
-@media screen and (max-width: 660px) {
-  .header {
-    display: flex;
-    flex-direction: column;
+@media screen and (max-width: 790px) {
+  .App {
+    overflow-x: hidden;
   }
 
   .menu {
     margin-left: 18px;
     font-size: 1.5rem;
+  }
+
+  .App .header {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header .menu-scrolled {
+    margin-left: 0;
+  }
+
+  .menu-scrolled div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header .sticker-marquee svg {
+    width: 140px;
+  }
+
+  .flowers1 {
+    width: 500px;
+    margin-top: 38px;
+    margin-bottom: 17px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .flowers1 {
+    display: none;
+  }
+
+  .App .page {
+    margin-top: 230px;
   }
 }
